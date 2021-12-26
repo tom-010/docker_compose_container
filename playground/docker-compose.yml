@@ -1,0 +1,14 @@
+version: "3.9"
+   
+services:
+  web:
+    image: nginxdemos/hello:0.2-plain-text
+    ports:
+      - 80:80
+  
+  # db:
+  #   image: postgres
+  #   environment:
+  #     - POSTGRES_NAME=postgres
+  #     - POSTGRES_USER=postgres
+  #     - POSTGRES_PASSWORD=postgres

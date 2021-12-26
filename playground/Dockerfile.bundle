@@ -1,0 +1,2 @@
+FROM tom010/docker-compose-container:latest
+COPY . /project
