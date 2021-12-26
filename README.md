@@ -9,3 +9,9 @@ in the outer container so that there is only one download while building
 and not while starting the contianer the first time, which is quite 
 unpredictable. Also everything is packed together and testable, so you can
 be sure, that it works.
+
+## Goals
+
+* Download depending images on docker-pull (as expected)
+* Package all containers of docker-compose into one container to give it a version and make it testable
+* Avoid conflicts of inner containers with outer containers (make them transparent)

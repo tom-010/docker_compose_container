@@ -9,5 +9,7 @@ WORKDIR /project
 COPY ./entrypoint.sh /
 COPY ./adjust_docker_compose.py /
 
+ENV NAME $COMPOSE_PROJECT_NAME
+
 ENTRYPOINT [ "/entrypoint.sh" ]
 

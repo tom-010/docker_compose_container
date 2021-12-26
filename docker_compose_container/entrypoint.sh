@@ -1,6 +1,10 @@
 #!/bin/sh
 cd /project/
 
-cat ./docker-compose.yml | python3 /adjust_docker_compose.py | docker-compose -f - up --build
+
+# use -p only if there is $NAME set
+[ ! -z "$NAME"] && $NAME="-p $NAME"
+
+cat ./docker-compose.yml | python3 /adjust_docker_compose.py | docker-compose $NAME -f - up --build
 
 #docker-compose -p project1 up --build
